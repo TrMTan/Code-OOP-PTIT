@@ -1,0 +1,40 @@
+package J05044_LietKeNhanVienTheoChucVu;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = Integer.parseInt(sc.nextLine());
+        ArrayList<NhanVien> list = new ArrayList<>();
+        while(t-->0){
+            list.add(new NhanVien(sc.nextLine(), sc.nextLine(), Integer.parseInt(sc.nextLine()), Integer.parseInt(sc.nextLine())));
+        }
+        String cv = sc.nextLine();
+        for(NhanVien i : list){
+            if(i.getCv().equals(cv))
+                System.out.println(i);
+        }
+    }
+}
+
+
+// 4
+// Tran Thi Yen
+// NV
+// 1000
+// 24
+// Nguyen Van Thanh
+// BV
+// 1000
+// 30
+// Doan Truong An
+// TP
+// 3000
+// 25
+// Le Thanh
+// GD
+// 5000
+// 28
+// TP
